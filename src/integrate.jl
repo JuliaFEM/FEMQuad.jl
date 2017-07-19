@@ -1,5 +1,5 @@
 # This file is a part of JuliaFEM.
-# License is MIT: see https://github.com/JuliaFEM/JuliaFEM.jl/blob/master/LICENSE.md
+# License is MIT: see https://github.com/JuliaFEM/FEMQuad.jl/blob/master/LICENSE
 
 # Let's drop here all integration schemes and some defaults for different element types maybe parse from txt file ..?
 
