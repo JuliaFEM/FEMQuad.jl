@@ -3,17 +3,10 @@ os:
     - linux
 julia:
     - 0.6
-    - nightly
 before_script:
-    - julia --color=yes -e 'Pkg.clone(pwd())'
-    - julia --color=yes -e 'Pkg.add("Coverage")'
-    - julia --color=yes -e 'Pkg.add("Documenter")'
-    - julia --color=yes -e 'Pkg.add("Lint")'
+    - julia --color=yes -e 'Pkg.clone("https://github.com/JuliaFEM/PkgTestSuite.jl.git")'
+    - julia --color=yes -e 'using PkgTestSuite; init()'
 script:
-    - julia --color=yes -e 'Pkg.build("FEMQuad")'
-    - julia --color=yes -e 'cd(Pkg.dir("FEMQuad", "test")); include("run_lint.jl")'
-    - julia --color=yes -e 'cd(Pkg.dir("FEMQuad", "docs")); include("make.jl")'
-    - julia --color=yes -e 'Pkg.test("FEMQuad", coverage=true)'
+    - julia --color=yes -e 'using PkgTestSuite; test()'
 after_success:
-    - julia --color=yes -e 'cd(Pkg.dir("FEMQuad")); using Coverage; Coveralls.submit(Coveralls.process_folder())'
-    - julia --color=yes -e 'cd(Pkg.dir("FEMQuad", "docs")); include("deploy.jl")'
+    - julia --color=yes -e 'using PkgTestSuite; deploy()'
