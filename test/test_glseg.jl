@@ -3,33 +3,24 @@
 
 using Base.Test
 using FEMQuad
-
-function integrate_1d(f::Function, rule::Symbol)
-    points = FEMQuad.get_integration_points(getfield(FEMQuad, rule))
-    result = sum(w*f(ip) for (w, ip) in points)
-    return result
-end
+using FEMQuad: integrate_1d, get_rule
 
 @testset "Gauss-Legendre quadratures in one dimension" begin
     # Gaussian quadrature using N points can provide the exact integral if
     # polynomial degree of f is 2N-1 or less => N = (deg(f)+1)/2
 
-    f1(x) = x   # N = 1
-    @test isapprox(integrate_1d(f1, :GLSEG1), 0.0)
-    f2(x) = x^2 # N = 1.5
-    @test isapprox(integrate_1d(f2, :GLSEG2), 2/3)
-    f3(x) = x^3 # N = 2
-    @test isapprox(integrate_1d(f3, :GLSEG2), 0.0)
-    f4(x) = x^4 # N = 2.5
-    @test isapprox(integrate_1d(f4, :GLSEG3), 2/5)
-    f5(x) = x^5 # N = 3
-    @test isapprox(integrate_1d(f5, :GLSEG3), 0.0)
-    f6(x) = x^6 # N = 3.5
-    @test isapprox(integrate_1d(f6, :GLSEG4), 2/7)
-    f7(x) = x^7 # N = 4
-    @test isapprox(integrate_1d(f7, :GLSEG4), 0.0)
-    f8(x) = x^8 # N = 4.5
-    @test isapprox(integrate_1d(f8, :GLSEG5), 2/9)
-    f9(x) = x^9 # N = 5
-    @test isapprox(integrate_1d(f9, :GLSEG5), 0.0)
+    rules = (:GLSEG1, :GLSEG2, :GLSEG3, :GLSEG4, :GLSEG5)
+    f(i) = x -> sum([x^j for j=0:i])
+    r(i::Int) = get_rule(i, rules...)
+
+    @test isapprox(integrate_1d(f(0), r(0)), 2.0)
+    @test isapprox(integrate_1d(f(1), r(1)), 2.0)
+    @test isapprox(integrate_1d(f(2), r(2)), 8/3)
+    @test isapprox(integrate_1d(f(3), r(3)), 8/3)
+    @test isapprox(integrate_1d(f(4), r(4)), 46/15)
+    @test isapprox(integrate_1d(f(5), r(5)), 46/15)
+    @test isapprox(integrate_1d(f(6), r(6)), 352/105)
+    @test isapprox(integrate_1d(f(7), r(7)), 352/105)
+    @test isapprox(integrate_1d(f(8), r(8)), 1126/315)
+    @test isapprox(integrate_1d(f(9), r(9)), 1126/315)
 end

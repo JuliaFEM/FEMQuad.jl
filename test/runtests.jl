@@ -5,7 +5,9 @@ using Base.Test
 
 test_files = String[]
 
-push!(test_files, "glseg.jl")
+push!(test_files, "test_glseg.jl")
+push!(test_files, "test_glquad.jl")
+push!(test_files, "test_glhex.jl")
 
 using TimerOutputs
 const to = TimerOutput()
