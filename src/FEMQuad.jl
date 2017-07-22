@@ -7,6 +7,8 @@ module FEMQuad
 include("glseg.jl")
 # Gaussian-Legendre quadratures in 2d quadrangles
 include("glquad.jl")
+# Gaussian-Legendre quadratures in 2d triangles
+include("gltri.jl")
 # Gaussian-Legendre quadratures in 3d hexahedrons
 include("glhex.jl")
 
@@ -18,6 +20,8 @@ function get_rule(order::Int, rules::Vararg{Symbol})
             return rule
         end
     end
+    warn("No accurate rule enough found, picking last.")
+    return rules[end]
 end
 
 function integrate_1d(f::Function, rule::Symbol)
