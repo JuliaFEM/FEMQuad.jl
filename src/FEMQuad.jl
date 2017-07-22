@@ -13,6 +13,8 @@ include("gltri.jl")
 include("glhex.jl")
 # Gaussian-Legendre quadratures in 3d tetrahedrons
 include("gltet.jl")
+# Gaussian-Legendre quadratures in 3d wedges
+include("glwed.jl")
 
 #include("integrate.jl")
 

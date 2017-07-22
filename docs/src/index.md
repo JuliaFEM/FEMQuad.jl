@@ -71,6 +71,16 @@ FEMQuad.get_quadrature_points(::Type{Val{:GLHEX81}})
 FEMQuad.get_quadrature_points(::Type{Val{:GLHEX243}})
 ```
 
+### Gauss-Legendre rules in prismatic domain
+
+These rules for wedge are mainly tensor products of triangular domain and 1d domain
+
+```@docs
+FEMQuad.get_quadrature_points(::Type{Val{:GLWED6}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLWED6B}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLWED21}})
+```
+
 ## Index
 
 ```@index
