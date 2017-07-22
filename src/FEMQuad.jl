@@ -11,6 +11,8 @@ include("glquad.jl")
 include("gltri.jl")
 # Gaussian-Legendre quadratures in 3d hexahedrons
 include("glhex.jl")
+# Gaussian-Legendre quadratures in 3d tetrahedrons
+include("gltet.jl")
 
 #include("integrate.jl")
 

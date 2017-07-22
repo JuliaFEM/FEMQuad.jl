@@ -21,6 +21,21 @@ FEMQuad.get_quadrature_points(::Type{Val{:GLSEG4}})
 FEMQuad.get_quadrature_points(::Type{Val{:GLSEG5}})
 ```
 
+### Gauss-Legendre rules in triangles
+
+These rules are from literature.
+
+```@docs
+FEMQuad.get_quadrature_points(::Type{Val{:GLTRI1}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLTRI3}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLTRI3B}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLTRI4}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLTRI4B}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLTRI6}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLTRI7}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLTRI12}})
+```
+
 ### Gauss-Legendre rules in quadrangles
 
 These rules are get from 1d quadratures by using tensor production.
@@ -33,6 +48,17 @@ FEMQuad.get_quadrature_points(::Type{Val{:GLQUAD16}})
 FEMQuad.get_quadrature_points(::Type{Val{:GLQUAD25}})
 ```
 
+### Gauss-Legendre rules in tetrahedrons
+
+These rules are from literature.
+
+```@docs
+FEMQuad.get_quadrature_points(::Type{Val{:GLTET1}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLTET4}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLTET5}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLTET15}})
+```
+
 ### Gauss-Legendre rules in hexahedrons
 
 These rules are get from 1d quadratures by using tensor production.
@@ -43,21 +69,6 @@ FEMQuad.get_quadrature_points(::Type{Val{:GLHEX8}})
 FEMQuad.get_quadrature_points(::Type{Val{:GLHEX27}})
 FEMQuad.get_quadrature_points(::Type{Val{:GLHEX81}})
 FEMQuad.get_quadrature_points(::Type{Val{:GLHEX243}})
-```
-
-### Gauss-Legendre rules in triangles
-
-Get from literature sources.
-
-```@docs
-FEMQuad.get_quadrature_points(::Type{Val{:GLTRI1}})
-FEMQuad.get_quadrature_points(::Type{Val{:GLTRI3}})
-FEMQuad.get_quadrature_points(::Type{Val{:GLTRI3B}})
-FEMQuad.get_quadrature_points(::Type{Val{:GLTRI4}})
-FEMQuad.get_quadrature_points(::Type{Val{:GLTRI4B}})
-FEMQuad.get_quadrature_points(::Type{Val{:GLTRI6}})
-FEMQuad.get_quadrature_points(::Type{Val{:GLTRI7}})
-FEMQuad.get_quadrature_points(::Type{Val{:GLTRI12}})
 ```
 
 ## Index
