@@ -21,3 +21,12 @@ using FEMQuad: integrate_2d, get_rule
     #@test isapprox(integrate_2d(f(8), r(8)), 4861/2520)
     #@test isapprox(integrate_2d(f(9), r(9)), 55991/27720)
 end
+
+@testset "Gauss-Legendre quadratures in triangles B" begin
+    rules = (:GLTRI1, :GLTRI3B, :GLTRI4B, :GLTRI6, :GLTRI7, :GLTRI12)
+    f(i) = x -> sum(sum(x)^j for j=0:i)
+    r(i::Int) = get_rule(i, rules...)
+
+    @test isapprox(integrate_2d(f(2), r(2)), 13/12)
+    @test isapprox(integrate_2d(f(3), r(3)), 77/60)
+end
