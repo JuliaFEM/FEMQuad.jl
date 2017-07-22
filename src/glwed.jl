@@ -89,5 +89,5 @@ function get_quadrature_points(::Type{Val{:GLWED21}})
 end
 
 function get_order(::Type{Val{:GLWED21}})
-    return 2
+    return 5
 end
