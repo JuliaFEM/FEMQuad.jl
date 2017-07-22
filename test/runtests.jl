@@ -3,6 +3,21 @@
 
 using Base.Test
 
+test_files = String[]
+
+push!(test_files, "test_glseg.jl")
+push!(test_files, "test_glquad.jl")
+push!(test_files, "test_glhex.jl")
+
+using TimerOutputs
+const to = TimerOutput()
 @testset "FEMQuad.jl" begin
-    @test 1 == 2
+    for fn in test_files
+        timeit(to, fn) do
+            include(fn)
+        end
+    end
 end
+println()
+println("Test statistics:")
+println(to)

@@ -3,50 +3,6 @@
 
 # Let's drop here all integration schemes and some defaults for different element types maybe parse from txt file ..?
 
-### Gauss quadrature rules for one dimension
-
-function get_integration_points(::Type{Val{1}})
-    return [2.0], [0.0]
-end
-
-function get_integration_points(::Type{Val{2}})
-    return [1.0, 1.0], sqrt(1.0/3.0)*[-1.0, 1.0]
-end
-
-function get_integration_points(::Type{Val{3}})
-    return 1.0/9.0*[5.0, 8.0, 5.0], sqrt(3.0/5.0)*[-1.0, 0.0, 1.0]
-end
-
-function get_integration_points(::Type{Val{4}})
-    weights = 1.0/36.0*[
-        18.0-sqrt(30.0),
-        18.0+sqrt(30.0),
-        18.0+sqrt(30.0),
-        18.0-sqrt(30.0)]
-    points = [
-        -sqrt(3.0/7.0 + 2.0/7.0*sqrt(6.0/5.0)),
-        -sqrt(3.0/7.0 - 2.0/7.0*sqrt(6.0/5.0)),
-         sqrt(3.0/7.0 - 2.0/7.0*sqrt(6.0/5.0)),
-         sqrt(3.0/7.0 + 2.0/7.0*sqrt(6.0/5.0))]
-    return weights, points
-end
-
-function get_integration_points(::Type{Val{5}})
-    weights = [
-        1.0/900.0*(322.0-13.0*sqrt(70.0)),
-        1.0/900.0*(322.0+13.0*sqrt(70.0)),
-        128.0/225.0,
-        1.0/900.0*(322.0+13.0*sqrt(70.0)),
-        1.0/900.0*(322.0-13.0*sqrt(70.0))]
-    points = [
-        -1.0/3.0*sqrt(5.0 + 2.0*sqrt(10.0/7.0)),
-        -1.0/3.0*sqrt(5.0 - 2.0*sqrt(10.0/7.0)),
-         0.0,
-         1.0/3.0*sqrt(5.0 - 2.0*sqrt(10.0/7.0)),
-         1.0/3.0*sqrt(5.0 + 2.0*sqrt(10.0/7.0))]
-    return weights, points
-end
-
 function get_integration_points(order::Int64)
     if order <= 5
         return get_integration_points(Val{order})
