@@ -10,6 +10,8 @@ push!(test_files, "test_glquad.jl")
 push!(test_files, "test_glhex.jl")
 push!(test_files, "test_gltri.jl")
 push!(test_files, "test_gltet.jl")
+push!(test_files, "test_glwed.jl")
+push!(test_files, "test_glpyr.jl")
 
 using TimerOutputs
 const to = TimerOutput()
