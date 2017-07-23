@@ -81,6 +81,13 @@ FEMQuad.get_quadrature_points(::Type{Val{:GLWED6B}})
 FEMQuad.get_quadrature_points(::Type{Val{:GLWED21}})
 ```
 
+### Gauss-Legendre rules in pyramidal domains
+
+```@docs
+FEMQuad.get_quadrature_points(::Type{Val{:GLPYR5}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLPYR5B}})
+```
+
 ## Index
 
 ```@index

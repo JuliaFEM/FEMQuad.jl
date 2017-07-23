@@ -15,8 +15,8 @@ include("glhex.jl")
 include("gltet.jl")
 # Gaussian-Legendre quadratures in 3d wedges
 include("glwed.jl")
-
-#include("integrate.jl")
+# Gaussian-Legendre quadratures in 3d pyramid
+include("glpyr.jl")
 
 function get_rule(order::Int, rules::Vararg{Symbol})
     for rule in rules
