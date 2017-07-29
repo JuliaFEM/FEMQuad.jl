@@ -46,4 +46,6 @@ function integrate_3d(f::Function, rule::Symbol)
     return result
 end
 
+export get_quadrature_points
+
 end
