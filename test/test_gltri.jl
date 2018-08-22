@@ -1,8 +1,7 @@
 # This file is a part of JuliaFEM.
 # License is MIT: see https://github.com/JuliaFEM/FEMQuad.jl/blob/master/LICENSE
 
-using Base.Test
-using FEMQuad
+using FEMQuad, Test
 using FEMQuad: integrate_2d, get_rule
 
 @testset "Gauss-Legendre quadratures in triangles" begin

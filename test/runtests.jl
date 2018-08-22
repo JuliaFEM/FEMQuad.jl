@@ -1,27 +1,17 @@
 # This file is a part of JuliaFEM.
 # License is MIT: see https://github.com/JuliaFEM/FEMQuad.jl/blob/master/LICENSE
 
-using Base.Test
+using Test
 
-test_files = String[]
+include("../docs/make.jl")
 
-push!(test_files, "test_glseg.jl")
-push!(test_files, "test_glquad.jl")
-push!(test_files, "test_glhex.jl")
-push!(test_files, "test_gltri.jl")
-push!(test_files, "test_gltet.jl")
-push!(test_files, "test_glwed.jl")
-push!(test_files, "test_glpyr.jl")
-
-using TimerOutputs
-const to = TimerOutput()
 @testset "FEMQuad.jl" begin
-    for fn in test_files
-        timeit(to, fn) do
-            include(fn)
-        end
-    end
+    @testset "test_glseg" begin include("test_glseg.jl") end
+    @testset "test_glhex" begin include("test_glhex.jl") end
+    @testset "test_gltri" begin include("test_gltri.jl") end
+    @testset "test_gltet" begin include("test_gltet.jl") end
+    @testset "test_glwed" begin include("test_glwed.jl") end
+    @testset "test_glpyr" begin include("test_glpyr.jl") end
 end
-println()
-println("Test statistics:")
-println(to)
+
+include("../docs/deploy.jl")
