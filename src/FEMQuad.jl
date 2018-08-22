@@ -24,7 +24,7 @@ function get_rule(order::Int, rules::Vararg{Symbol})
             return rule
         end
     end
-    warn("No accurate rule enough found, picking last.")
+    @warn("No accurate rule enough found, picking last.", order, rules)
     return rules[end]
 end
 

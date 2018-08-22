@@ -1,8 +1,7 @@
 # This file is a part of JuliaFEM.
 # License is MIT: see https://github.com/JuliaFEM/FEMQuad.jl/blob/master/LICENSE
 
-using Base.Test
-using FEMQuad
+using FEMQuad, Test
 using FEMQuad: integrate_3d, get_rule
 
 @testset "Gauss-Legendre quadratures in prismatic domains" begin
@@ -21,4 +20,3 @@ using FEMQuad: integrate_3d, get_rule
     #@test isapprox(integrate_3d(f(6), :GLWED21), 4597.0/420.0)
     #@test isapprox(integrate_3d(f(7), :GLWED21), 20959.0/1260.0)
 end
-
