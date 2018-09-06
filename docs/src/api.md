@@ -69,8 +69,8 @@ These rules are get from 1d quadratures by using tensor production.
 FEMQuad.get_quadrature_points(::Type{Val{:GLHEX1}})
 FEMQuad.get_quadrature_points(::Type{Val{:GLHEX8}})
 FEMQuad.get_quadrature_points(::Type{Val{:GLHEX27}})
-FEMQuad.get_quadrature_points(::Type{Val{:GLHEX81}})
-FEMQuad.get_quadrature_points(::Type{Val{:GLHEX243}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLHEX64}})
+FEMQuad.get_quadrature_points(::Type{Val{:GLHEX125}})
 ```
 
 ### Gauss-Legendre rules in prismatic domain
