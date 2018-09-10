@@ -3,15 +3,12 @@
 
 module FEMQuad
 
-# Gaussian-Legendre quadratures in 1d segments
-include("glseg.jl")
-# Gaussian-Legendre quadratures in 2d quadrangles
+# Gaussian-Legendre quadratures
+include("quaddata.jl")
 include("glquad.jl")
 # Gaussian-Legendre quadratures in 2d triangles
 include("gltri.jl")
 # Gaussian-Legendre quadratures in 3d hexahedrons
-include("glhex.jl")
-# Gaussian-Legendre quadratures in 3d tetrahedrons
 include("gltet.jl")
 # Gaussian-Legendre quadratures in 3d wedges
 include("glwed.jl")
