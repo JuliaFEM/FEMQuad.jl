@@ -61,7 +61,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 1 point rule on segment. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLSEG1})\n\nGauss-Legendre quadrature, 1 point rule on segment.\n\n\n\n\n\n"
 },
 
 {
@@ -69,7 +69,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 2 point rule on segment. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLSEG2})\n\nGauss-Legendre quadrature, 2 point rule on segment.\n\n\n\n\n\n"
 },
 
 {
@@ -77,7 +77,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 3 point rule on segment. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLSEG3})\n\nGauss-Legendre quadrature, 3 point rule on segment.\n\n\n\n\n\n"
 },
 
 {
@@ -85,7 +85,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 4 point rule on segment. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLSEG4})\n\nGauss-Legendre quadrature, 4 point rule on segment.\n\n\n\n\n\n"
 },
 
 {
@@ -93,7 +93,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 5 point rule on segment. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLSEG5})\n\nGauss-Legendre quadrature, 5 point rule on segment.\n\n\n\n\n\n"
 },
 
 {
@@ -181,7 +181,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 1 point rule on quadrilateral. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLQUAD1})\n\nGauss-Legendre quadrature, 1 point rule on quadrilateral.\n\n\n\n\n\n"
 },
 
 {
@@ -189,7 +189,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 4 point rule on quadrilateral. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLQUAD4})\n\nGauss-Legendre quadrature, 4 point rule on quadrilateral.\n\n\n\n\n\n"
 },
 
 {
@@ -197,7 +197,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 9 point rule on quadrilateral. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLQUAD9})\n\nGauss-Legendre quadrature, 9 point rule on quadrilateral.\n\n\n\n\n\n"
 },
 
 {
@@ -205,7 +205,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 16 point rule on quadrilateral. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLQUAD16})\n\nGauss-Legendre quadrature, 16 point rule on quadrilateral.\n\n\n\n\n\n"
 },
 
 {
@@ -213,7 +213,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 25 point rule on quadrilateral. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLQUAD25})\n\nGauss-Legendre quadrature, 25 point rule on quadrilateral.\n\n\n\n\n\n"
 },
 
 {
@@ -269,7 +269,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 1 point rule on hexahedron. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLHEX1})\n\nGauss-Legendre quadrature, 1 point rule on hexahedron.\n\n\n\n\n\n"
 },
 
 {
@@ -277,7 +277,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 8 point rule on hexahedron. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLHEX8})\n\nGauss-Legendre quadrature, 8 point rule on hexahedron.\n\n\n\n\n\n"
 },
 
 {
@@ -285,23 +285,23 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 27 point rule on hexahedron. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLHEX27})\n\nGauss-Legendre quadrature, 27 point rule on hexahedron.\n\n\n\n\n\n"
 },
 
 {
-    "location": "api.html#FEMQuad.get_quadrature_points-Tuple{Type{Val{:GLHEX81}}}",
+    "location": "api.html#FEMQuad.get_quadrature_points-Tuple{Type{Val{:GLHEX64}}}",
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 81 point rule on hexahedron. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLHEX64})\n\nGauss-Legendre quadrature, 64 point rule on hexahedron.\n\n\n\n\n\n"
 },
 
 {
-    "location": "api.html#FEMQuad.get_quadrature_points-Tuple{Type{Val{:GLHEX243}}}",
+    "location": "api.html#FEMQuad.get_quadrature_points-Tuple{Type{Val{:GLHEX125}}}",
     "page": "API documentation",
     "title": "FEMQuad.get_quadrature_points",
     "category": "method",
-    "text": "Gauss-Legendre quadrature, 243 point rule on quadrilateral. \n\n\n\n\n\n"
+    "text": "get_quadrature_points(::Type{Val{:GLHEX125})\n\nGauss-Legendre quadrature, 125 point rule on hexahedron.\n\n\n\n\n\n"
 },
 
 {
@@ -309,7 +309,7 @@ var documenterSearchIndex = {"docs": [
     "page": "API documentation",
     "title": "Gauss-Legendre rules in hexahedrons",
     "category": "section",
-    "text": "These rules are get from 1d quadratures by using tensor production.FEMQuad.get_quadrature_points(::Type{Val{:GLHEX1}})\nFEMQuad.get_quadrature_points(::Type{Val{:GLHEX8}})\nFEMQuad.get_quadrature_points(::Type{Val{:GLHEX27}})\nFEMQuad.get_quadrature_points(::Type{Val{:GLHEX81}})\nFEMQuad.get_quadrature_points(::Type{Val{:GLHEX243}})"
+    "text": "These rules are get from 1d quadratures by using tensor production.FEMQuad.get_quadrature_points(::Type{Val{:GLHEX1}})\nFEMQuad.get_quadrature_points(::Type{Val{:GLHEX8}})\nFEMQuad.get_quadrature_points(::Type{Val{:GLHEX27}})\nFEMQuad.get_quadrature_points(::Type{Val{:GLHEX64}})\nFEMQuad.get_quadrature_points(::Type{Val{:GLHEX125}})"
 },
 
 {
