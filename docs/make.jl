@@ -4,6 +4,8 @@
 using Documenter, FEMQuad
 
 makedocs(modules=[FEMQuad],
-         format = :html,
+         format = Documenter.HTML(),
          sitename = "FEMQuad.jl",
          pages = ["index.md", "api.md"])
+
+include("deploy.jl")
