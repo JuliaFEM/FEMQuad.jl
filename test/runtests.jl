@@ -3,8 +3,6 @@
 
 using Test
 
-include("../docs/make.jl")
-
 @testset "FEMQuad.jl" begin
     @testset "test_glquad" begin include("test_glquad.jl") end
     @testset "test_gltri" begin include("test_gltri.jl") end
@@ -12,5 +10,3 @@ include("../docs/make.jl")
     @testset "test_glwed" begin include("test_glwed.jl") end
     @testset "test_glpyr" begin include("test_glpyr.jl") end
 end
-
-include("../docs/deploy.jl")
