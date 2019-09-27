@@ -1,0 +1,13 @@
+name = "FEMQuad"
+uuid = "be8e8821-3f6f-54c2-987c-d2773c3a52cb"
+authors = ["Jukka Aho <ahojukka5@gmail.com>"]
+version = "0.3.1"
+
+[compat]
+julia = "≥ 1.0.0"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
