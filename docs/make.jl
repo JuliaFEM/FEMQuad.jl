@@ -7,5 +7,3 @@ makedocs(modules=[FEMQuad],
          format = Documenter.HTML(),
          sitename = "FEMQuad.jl",
          pages = ["index.md", "api.md"])
-
-include("deploy.jl")
