@@ -1,7 +1,7 @@
 name = "FEMQuad"
 uuid = "be8e8821-3f6f-54c2-987c-d2773c3a52cb"
 authors = ["Jukka Aho <ahojukka5@gmail.com>"]
-version = "0.3.1"
+version = "0.3.2"
 
 [compat]
 julia = "≥ 1.0.0"
